@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="500dp"
+        android:id="@+id/dp"
+        />
+    <TimePicker
+        android:id="@+id/tp"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_below="@id/dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt1"
+        android:text="show time date"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et1"
+        android:layout_below="@id/bt1"
+        android:layout_centerHorizontal="true"
+        android:hint="Date and Time picked: "/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt2"
+        android:layout_below="@id/et1"
+        android:text="next activity"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

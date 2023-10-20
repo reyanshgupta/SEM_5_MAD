@@ -1,0 +1,85 @@
+F<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Camera"
+        android:id="@+id/cambutton"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radiogrp"
+        android:layout_below="@id/cambutton">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checked"
+            android:text="Male"
+            android:id="@+id/rb1"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checked"
+            android:text="Female"
+            android:id="@+id/rb2"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checked"
+            android:text="Other"
+            android:id="@+id/rb3"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check1"
+        android:layout_below="@id/radiogrp"
+        android:text="yes"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check2"
+        android:layout_below="@id/check1"
+        android:text="No"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check3"
+        android:layout_below="@id/check2"
+        android:text="Maybe"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit"
+        android:layout_below="@id/check3"
+        android:text="Submit"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et1"
+        android:layout_below="@id/submit"
+        android:layout_centerHorizontal="true"
+        android:hint="This is the checkbox value"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/intent"
+        android:layout_below="@id/et1"
+        android:onClick="newAct"
+        android:text="new Activity"/>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460841640891",
+    "project_id": "sanguine-air-398414",
+    "storage_bucket": "sanguine-air-398414.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460841640891:android:317536e299f93e670fda9e",
+        "android_client_info": {
+          "package_name": "com.example.a16oct_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIug4SlbBVIAtOyQSuYVdmGdsQwDBzjzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

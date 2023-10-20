@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Employee name"
+        android:id="@+id/employeeName"/>
+
+    <EditText
+        android:id="@+id/employeeNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Employee Number" />
+
+    <EditText
+        android:id="@+id/employeeDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Employee Department"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"
+        android:text="Save"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/display"
+        android:text="Display"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete"
+        android:text="Delete"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/update"
+        android:text="Update"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details: "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayName"
+        android:hint="Employee Name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayNo"
+        android:hint="Employee Number"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayDepartment"
+        android:hint="Employee Department"/>
+
+
+</LinearLayout>

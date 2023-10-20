@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="CheckOutput"
+        android:id="@+id/checkOutput"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Int Output"
+        android:id="@+id/intOutput"
+        android:layout_below="@id/checkOutput"
+        />
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/webview"
+        android:layout_below="@id/intOutput"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/webview"
+        android:id="@+id/act3"
+        android:text="Next Activity!"/>
+
+</RelativeLayout>

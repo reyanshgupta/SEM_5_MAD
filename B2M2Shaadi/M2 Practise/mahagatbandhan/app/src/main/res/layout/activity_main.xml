@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickPicture"
+        android:id="@+id/cameraButton"
+        android:layout_centerHorizontal="true"
+        android:text="Camera"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@id/cameraButton"
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radioCheck"
+            android:id="@+id/rb1"
+            android:text="Male"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radioCheck"
+            android:id="@+id/rb2"
+            android:text="Female"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radioCheck"
+            android:id="@+id/rb3"
+            android:text="Attack Helicopter"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radioCheck"
+            android:id="@+id/rb4"
+            android:text="Other"
+            />
+    </RadioGroup>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb1"
+        android:layout_below="@id/radioGroup"
+        android:text="Car"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb2"
+        android:layout_below="@id/cb1"
+        android:text="Bike"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto"
+        android:layout_below="@id/cb2"
+        android:id="@+id/cb3"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/intInput"
+        android:layout_below="@id/cb3"
+        android:hint="Enter an integer input"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/act2button"
+        android:layout_below="@id/intInput"
+        android:text="Next Activity!"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

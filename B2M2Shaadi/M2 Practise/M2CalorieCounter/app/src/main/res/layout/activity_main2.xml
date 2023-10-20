@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breakfast: "
+        android:id="@+id/breakfast"
+        android:layout_centerHorizontal="true"
+        />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/breakfast"
+        android:id="@+id/lvbreakfast"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lunch: "
+        android:id="@+id/lunch"
+        android:layout_below="@id/lvbreakfast"
+        android:layout_centerHorizontal="true"
+        />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/lunch"
+        android:id="@+id/lvlunch"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dinner: "
+        android:layout_below="@id/lvlunch"
+        android:id="@+id/dinner"
+        android:layout_centerHorizontal="true"
+        />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/dinner"
+        android:id="@+id/lvdinner"
+        />
+</RelativeLayout>
