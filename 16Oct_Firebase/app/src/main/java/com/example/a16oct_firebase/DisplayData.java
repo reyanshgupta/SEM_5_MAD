@@ -28,7 +28,7 @@ public class DisplayData extends AppCompatActivity {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("updatehelper");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot parent) {
                 list.clear();
                 for(DataSnapshot child: parent.getChildren()){
                     updatehelper info = child.getValue(updatehelper.class);
