@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.assignment2_quizzler"
-        minSdk 30
-        targetSdk 33
+        minSdk 28
+        targetSdk 28
         versionCode 1
         versionName "1.0"
 
