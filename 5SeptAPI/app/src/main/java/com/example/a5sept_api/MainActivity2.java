@@ -31,7 +31,7 @@ public class MainActivity2 extends FragmentActivity implements OnMapReadyCallbac
     public void onMapReady(@NonNull GoogleMap googleMap) {
         this.gMap = googleMap;
         LatLng mapLag = new LatLng(37.425075,-122.176804);
-        this.gMap.addMarker(new MarkerOptions().position(mapLag).title("Eucalipto <3"));
+        this.gMap.addMarker(new MarkerOptions().position(mapLag).title("Eucalipto"));
         this.gMap.moveCamera(CameraUpdateFactory.newLatLng(mapLag));
     }
 }

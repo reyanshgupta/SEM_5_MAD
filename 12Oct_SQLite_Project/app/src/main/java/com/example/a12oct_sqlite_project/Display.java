@@ -26,7 +26,7 @@ public class Display extends AppCompatActivity {
             String id = cursor.getString(0);
             String name = cursor.getString(1);
             String author = cursor.getString(2);
-            String g`enre = cursor.getString(3);
+            String genre = cursor.getString(3);
             String rentcost = cursor.getString(4);
 
             buffer.append("BookID: "+id+"\n");

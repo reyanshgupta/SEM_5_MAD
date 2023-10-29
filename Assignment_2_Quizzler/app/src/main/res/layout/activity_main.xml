@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/quizzlerlogo"
+        android:src="@drawable/ic_quizzler_wo_bg"/>
+    <TextView
+        android:id="@+id/logintv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/quizzlerlogo"
+        android:text="Login"
+        android:textSize="30sp"
+        android:fontFamily="@font/helvetica_bold" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:id="@+id/loginusername"
+        android:hint="Username"
+        android:layout_below="@id/logintv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/user_input"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:id="@+id/loginpass"
+        android:hint="Password"
+        android:layout_below="@id/loginusername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        android:background="@drawable/user_input"
+        android:padding="10dp"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:id="@+id/loginbutton"
+        android:text="Login"
+        android:layout_below="@id/loginpass"
+        android:layout_marginTop="10dp"
+        style="@style/DarkButtonStyle"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/loginbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newacc"
+            android:text="New user?"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/register"
+            android:text="Register"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:onClick="registertv"/>
+    </LinearLayout>
+</RelativeLayout>

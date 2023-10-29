@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterPage">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/quizzlerlogo"
+        android:src="@drawable/ic_quizzler_wo_bg"/>
+
+    <TextView
+        android:id="@+id/registertv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/quizzlerlogo"
+        android:text="Register"
+        android:textSize="30sp"
+        android:fontFamily="@font/helvetica_bold" />
+
+    <EditText
+        android:id="@+id/registerfull"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/registertv"
+        android:layout_centerHorizontal="true"
+        android:hint="Full Name"
+        android:outlineProvider="none"
+        android:background="@drawable/user_input"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/registeruser"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/registerfull"
+        android:layout_centerHorizontal="true"
+        android:hint="Username"
+        android:background="@drawable/user_input"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/registeremail"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/registeruser"
+        android:layout_centerHorizontal="true"
+        android:hint="E-mail"
+        android:background="@drawable/user_input"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/registerage"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/registeremail"
+        android:layout_centerHorizontal="true"
+        android:hint="Age"
+        android:background="@drawable/user_input"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/registerpass"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/registerage"
+        android:layout_centerHorizontal="true"
+        android:hint="Password"
+        android:background="@drawable/user_input"
+        android:padding="10dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:id="@+id/registerbutton"
+        android:text="Register"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/registerpass"
+        android:layout_centerHorizontal="true"
+        style="@style/DarkButtonStyle" />
+</RelativeLayout>
