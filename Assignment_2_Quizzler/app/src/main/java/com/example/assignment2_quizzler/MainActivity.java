@@ -28,7 +28,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String username = usernameET.getText().toString();
+                if (username.isEmpty()){
+                    usernameET.setError("Username can't be empty");
+                    usernameET.requestFocus();
+                }
                 String password = passwordET.getText().toString();
+                if (password.isEmpty()){
+                    passwordET.setError("Password can't be empty");
+                    passwordET.requestFocus();
+                }
                 SQLiteDatabase db = dbHelper.getReadableDatabase();
                 String[] columns = {DbHelper.COLUMN_ID};
                 String selection = DbHelper.COLUMN_USERNAME + "=? AND " + DbHelper.COLUMN_PASSWORD + "=?"; // Check both username and password

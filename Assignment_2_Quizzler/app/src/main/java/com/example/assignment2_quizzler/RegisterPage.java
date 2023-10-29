@@ -26,31 +26,80 @@ public class RegisterPage extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Get user input from EditText fields
-                EditText fullNameET = findViewById(R.id.registerfull);
-                EditText usernameET = findViewById(R.id.registeruser);
-                EditText emailET = findViewById(R.id.registeremail);
-                EditText ageET = findViewById(R.id.registerage);
-                EditText passwordET = findViewById(R.id.registerpass);
+                // Call the validateInputs function to check input validity
+                if (validateInputs()) {
+                    // If inputs are valid, proceed with registration
+                    EditText fullNameET = findViewById(R.id.registerfull);
+                    EditText usernameET = findViewById(R.id.registeruser);
+                    EditText emailET = findViewById(R.id.registeremail);
+                    EditText ageET = findViewById(R.id.registerage);
+                    EditText passwordET = findViewById(R.id.registerpass);
 
-                String fullName = fullNameET.getText().toString();
-                String username = usernameET.getText().toString();
-                String email = emailET.getText().toString();
-                int age = Integer.parseInt(ageET.getText().toString());
-                String password = passwordET.getText().toString();
+                    String fullName = fullNameET.getText().toString();
+                    String username = usernameET.getText().toString();
+                    String email = emailET.getText().toString();
+                    int age = Integer.parseInt(ageET.getText().toString());
+                    String password = passwordET.getText().toString();
 
-                // Call addUser to insert user information into the database
-                long userId = addUser(fullName, username, email, age, password);
-
-                if (userId != -1) {
-                    // User registration successful
-                    // You can navigate to another activity or show a success message
-                } else {
-                    // User registration failed
-                    // Handle the error, e.g., show an error message
+                    long userId = addUser(fullName, username, email, age, password);
+                    if (userId != -1) {
+                        Toast.makeText(RegisterPage.this, "User Registered! Happy Quizzing", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // User registration failed
+                        // Handle the error, e.g., show an error message
+                    }
                 }
             }
         });
+    }
+
+    private boolean validateInputs() {
+        EditText fullNameET = findViewById(R.id.registerfull);
+        EditText usernameET = findViewById(R.id.registeruser);
+        EditText emailET = findViewById(R.id.registeremail);
+        EditText ageET = findViewById(R.id.registerage);
+        EditText passwordET = findViewById(R.id.registerpass);
+
+        String fullName = fullNameET.getText().toString();
+        String username = usernameET.getText().toString();
+        String email = emailET.getText().toString();
+        String ageStr = ageET.getText().toString();
+        String password = passwordET.getText().toString();
+
+        boolean isValid = true;
+
+        if (fullName.isEmpty()) {
+            fullNameET.setError("Please enter a name");
+            fullNameET.requestFocus();
+            isValid = false;
+        }
+
+        if (username.isEmpty()) {
+            usernameET.setError("Username can't be empty");
+            usernameET.requestFocus();
+            isValid = false;
+        }
+
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        if (email.isEmpty() || !email.matches(emailPattern)) {
+            emailET.setError("Invalid email format");
+            emailET.requestFocus();
+            isValid = false;
+        }
+
+        if (ageStr.isEmpty() || Integer.parseInt(ageStr) <= 0) {
+            ageET.setError("Please enter a valid positive age");
+            ageET.requestFocus();
+            isValid = false;
+        }
+
+        if (password.isEmpty()) {
+            passwordET.setError("Password can't be empty");
+            passwordET.requestFocus();
+            isValid = false;
+        }
+
+        return isValid;
     }
 
     public long addUser(String name, String username, String email, int age, String password) {
