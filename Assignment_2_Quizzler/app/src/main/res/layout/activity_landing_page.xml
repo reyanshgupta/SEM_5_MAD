@@ -40,6 +40,7 @@
         android:layout_height="wrap_content"
         android:padding="20dp"
         android:orientation="horizontal"
+        android:id="@+id/buttonLL"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/selectcourse">
         <Button
@@ -56,7 +57,15 @@
             android:id="@+id/IVPbtn"
             android:text="IVP"
             style="@style/DarkButtonStyle"/>
-
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rules"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/buttonLL"
+        android:padding="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Rules: \n \n 200 Points for the correct answer \n-100 points for a wrong answer"/>
 </RelativeLayout>

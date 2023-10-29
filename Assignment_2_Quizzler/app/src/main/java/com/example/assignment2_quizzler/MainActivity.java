@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (cursorCount > 0) {
                     Toast.makeText(MainActivity.this, "Welcome!", Toast.LENGTH_SHORT).show();
+                    deleteFile("currentloggedinuser.txt");
                     try {
                         FileOutputStream fos = openFileOutput("currentloggedinuser.txt",MODE_APPEND);
                         fos.write(username.getBytes());
