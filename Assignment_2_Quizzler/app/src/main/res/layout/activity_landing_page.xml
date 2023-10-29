@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandingPage">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/quizzlerlogo"
+        android:background="@color/black"
+        android:src="@drawable/ic_quizzler_wo_bg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernameDisplay"
+        android:layout_below="@id/quizzlerlogo"
+        android:hint="Welcome user"
+        android:textSize="20sp"
+        android:fontFamily="@font/helvetica_bold"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectcourse"
+        android:layout_below="@id/quizzlerlogo"
+        android:layout_marginTop="200dp"
+        android:text="Select the course for the Quiz!"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/selectcourse">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MADbtn"
+            android:text="MAD"
+            style="@style/DarkButtonStyle"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:id="@+id/IVPbtn"
+            android:text="IVP"
+            style="@style/DarkButtonStyle"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -11,9 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
     private DbHelper dbHelper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,11 +51,18 @@ public class MainActivity extends AppCompatActivity {
 
                 if (cursorCount > 0) {
                     Toast.makeText(MainActivity.this, "Welcome!", Toast.LENGTH_SHORT).show();
-                    // User with the provided username and password exists; allow login
-                    // You can navigate to another activity or show a success message
+                    try {
+                        FileOutputStream fos = openFileOutput("currentloggedinuser.txt",MODE_APPEND);
+                        fos.write(username.getBytes());
+                        fos.close();
+                    } catch (FileNotFoundException e) {
+                        throw new RuntimeException(e);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    startActivity(new Intent(MainActivity.this,LandingPage.class));;
                 } else {
-                    // User with the provided username and password does not exist; handle this case
-                    // For example, show an error message indicating invalid login credentials
+                    Toast.makeText(MainActivity.this, "Invalid Credentials, Please try again.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
