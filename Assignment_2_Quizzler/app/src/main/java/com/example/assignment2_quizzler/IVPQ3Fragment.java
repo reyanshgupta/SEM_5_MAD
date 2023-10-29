@@ -111,7 +111,7 @@ public class IVPQ3Fragment extends Fragment {
                 }
                 ((IVPActivity) requireActivity()).saveFinalScore();
                 Handler handler = new Handler();
-                int delayMilliseconds = 5000;
+                int delayMilliseconds = 3000;
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {

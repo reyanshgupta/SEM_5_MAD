@@ -1,5 +1,6 @@
 package com.example.assignment2_quizzler;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +32,7 @@ public class MADQ2Fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private String score;
 
     public MADQ2Fragment() {
         // Required empty public constructor
@@ -59,6 +69,49 @@ public class MADQ2Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_m_a_d_q2, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_m_a_d_q2, container, false);
+
+        RadioGroup radioGroup = rootView.findViewById(R.id.radio_group);
+        Button submitButton = rootView.findViewById(R.id.submit_button);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int currentscoreint = 0;
+                try {
+                    FileInputStream fis = requireActivity().openFileInput("currentscore.txt");
+                    int size = fis.available();
+                    byte buffer[] = new byte[size];
+                    fis.read(buffer);
+                    String currentscore = new String(buffer);
+                    currentscoreint = Integer.parseInt(currentscore);
+                    fis.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                int selectedId = radioGroup.getCheckedRadioButtonId();
+                if (selectedId == R.id.answer_choice_2) {
+                    currentscoreint += 200;
+                    Toast.makeText(getContext(), "Correct Answer!", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    currentscoreint -= 100;
+                    Toast.makeText(getContext(), "Wrong answer", Toast.LENGTH_SHORT).show();
+                }
+                try {
+                    FileOutputStream fos = requireActivity().openFileOutput("currentscore.txt", Context.MODE_PRIVATE);
+                    String newScore = String.valueOf(currentscoreint);
+                    fos.write(newScore.getBytes());
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                ((MADActivity) requireActivity()).loadNextQuestion();
+            }
+        });
+        return rootView;
     }
 }
