@@ -40,14 +40,7 @@ public class RegisterPage extends AppCompatActivity {
                     String email = emailET.getText().toString();
                     int age = Integer.parseInt(ageET.getText().toString());
                     String password = passwordET.getText().toString();
-
-                    long userId = addUser(fullName, username, email, age, password);
-                    if (userId != -1) {
-                        Toast.makeText(RegisterPage.this, "User Registered! Happy Quizzing", Toast.LENGTH_SHORT).show();
-                    } else {
-                        // User registration failed
-                        // Handle the error, e.g., show an error message
-                    }
+                    addUser(fullName, username, email, age, password);
                 }
             }
         });
